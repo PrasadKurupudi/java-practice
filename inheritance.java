@@ -1,22 +1,43 @@
-// single level inheritance
+// // single level inheritance
 
 
-class school { // parent class or main class
-    public void schools() {
-        System.out.println("Layer 1");
-    }
+// class school { // parent class or main class
+//     public void schools() {
+//         System.out.println("Layer 1");
+//     }
 
+// }
+// class students extends school { // child class or derived class
+//     public void students1(){
+//         System.out.println("Layer 2");
+//     }
+// }
+
+// public class inheritance {
+//     public static void main(String[] args) {
+//        students a = new students();
+//        a.schools(); // we can access the parent properties from the child 
+//        a.students1();
+//     }
+// }
+
+
+
+class base {
+    int a =10;
 }
-class students extends school { // child class or derived class
-    public void students1(){
-        System.out.println("Layer 2");
+class derived extends base {
+    int b =20;
+    int c;
+    void sum (){
+        c = a+b;
+        System.out.println(c);
     }
 }
-
 public class inheritance {
+
     public static void main(String[] args) {
-       students a = new students();
-       a.schools(); // we can access the parent properties from the child 
-       a.students1();
+        derived test = new derived();
+        test.sum();
     }
 }
